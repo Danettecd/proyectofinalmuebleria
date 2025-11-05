@@ -1,0 +1,250 @@
+/* Fondo general */
+body {
+  background-color: #CBC1B7;
+}
+
+/* Encabezado */
+.bg-header-beige {
+  color: #5c4b39;
+  background-color: rgb(177, 177, 161);
+}
+
+.marcellus-regular {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.marcellus-beige {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: italic;
+  color:#f9e9d9
+}
+header img,
+.bg-header-beige img {
+  max-width: 120px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .bg-header-beige img {
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bg-header-beige img {
+    max-width: 180px;
+  }
+}
+
+/* Alerta personalizada */
+.alert-gray {
+  background-color: #f9e9d9;
+  border: none;
+  color: #5c4b39;
+   animation: parpadeo 1.5s infinite;
+}
+@keyframes parpadeo {      
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Textos */
+h1 {
+  text-align: center;
+  font-family: "Marcellus", serif;
+  font-size: 4rem;
+  color: #5c4b39;
+}
+
+h2, h3 {
+  font-family: "Poppins", sans-serif;
+  color: #5c4b39;
+}
+h4 {
+  color: #5c4b39;
+}
+/* Tamaño de texto general */
+p {
+  font-size: 1.05rem; /* tamaño base */
+  line-height: 1.5;
+    color: #5c4b39;
+}
+
+/* responsivo */
+@media (min-width: 992px) {
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Fondo de cards */
+.bg-cards {
+  background-color: rgb(177, 177, 161);
+}
+/* Alineación uniforme de botones en tarjetas  */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* Mantiene el botón siempre al fondo */
+.card-body .btn-botones-carrito {
+  margin-top: auto;
+}
+
+/* Estilo de botones personalizados */
+.btn-botones-carrito {
+  background: linear-gradient(to right, beige, rgb(206, 206, 182));
+  color: #5c4b39;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-botones-carrito:hover {
+  background: radial-gradient(circle, rgb(218, 214, 189), rgb(146, 144, 138));
+  color: rgb(146, 152, 139);
+}
+
+/* Categorías (cards que abarcan todo el click) */
+.btn-categorias {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-categorias:hover {
+  background: linear-gradient(to right, beige, rgb(206, 206, 182));
+}
+
+/* Formularios */
+.formulario {
+  background-color: rgb(177, 177, 161);
+  font-family: "Poppins", sans-serif;
+  color: #5c4b39;
+}
+
+/* Footer */
+.footer {
+  font-family: "Poppins", sans-serif;
+  color: #5c4b39;
+}
+.footer a {
+  color: #5c4b39;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: beige;
+  text-decoration: underline;
+}
+
+/* Menú principal */
+.categorias-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+nav li {
+  margin-bottom: 20px;
+}
+nav a {
+  color: #5c4b39;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav a:hover {
+  color: beige;
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .btn-botones-carrito {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+/* @media sirve para aplicar estilos en ciertos tamaños de pantalla o dispositivos.
+para que el diseño se haga  responsivo*/
+
+
+/* Texto del carrusel 
+.carousel-caption {
+  bottom: 1.5rem;
+  color: #5c4b39; 
+  font-size: 1rem;
+ }*/ 
+/* #carrusel .carousel-indicators { top: 150px;}*/
+
+
+/* Indicadores: posición y tamaño responsivo */
+.carousel-indicators {
+    bottom: 10px;
+}
+
+.carousel-indicators button {
+    width: 30px;
+    height: 4px;
+    margin: 2px;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+    .carousel-indicators button {
+        width: 20px;
+        height: 3px;
+    }
+}
+
+/* Caption: tamaño y posición responsiva */
+.carousel-caption {
+    bottom: 20px;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    color: #5c4b39; 
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 500px;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .categorias-lista {
+    text-align: center;
+  }
+
+  .card img {
+    height: auto;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
