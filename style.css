@@ -3,11 +3,7 @@ body {
   background-color: #CBC1B7;
 }
 
-/* Encabezado */
-.bg-header-beige {
-  color: #5c4b39;
-  background-color: rgb(177, 177, 161);
-}
+
 
 .marcellus-regular {
   font-family: "Marcellus", serif;
@@ -190,45 +186,6 @@ para que el diseño se haga  responsivo*/
 /* #carrusel .carousel-indicators { top: 150px;}*/
 
 
-/* Indicadores: posición y tamaño responsivo */
-.carousel-indicators {
-    bottom: 10px;
-}
-
-.carousel-indicators button {
-    width: 30px;
-    height: 4px;
-    margin: 2px;
-    background-color: #000;
-    opacity: 0.5;
-}
-
-@media (max-width: 768px) {
-    .carousel-indicators button {
-        width: 20px;
-        height: 3px;
-    }
-}
-
-/* Caption: tamaño y posición responsiva */
-.carousel-caption {
-    bottom: 20px;
-}
-
-.carousel-caption p {
-    font-size: 1rem;
-    color: #5c4b39; 
-}
-
-@media (max-width: 768px) {
-    .carousel-caption {
-        bottom: 500px;
-    }
-
-    .carousel-caption p {
-        font-size: 0.8rem;
-    }
-}
 
 @media (max-width: 768px) {
   h1 {
@@ -247,4 +204,225 @@ para que el diseño se haga  responsivo*/
     margin-bottom: 1rem;
   }
 }
+/* --- CENTRAR MENÚ SOLO EN CELULAR --- */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center !important;
+    color: #5c4b39;
+  }
 
+  .navbar-nav {
+    width: 100%;
+    justify-content: center !important;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block !important;
+    margin: 5px;
+  }
+}
+/* ESTILOS MENU DESPLEGABLE*/
+
+/* Color de fondo general */
+body {
+  background-color: rgb(177, 177, 161);
+}
+
+/* Estilo del nav principal */
+.navbar {
+  background-color: transparent;
+}
+
+/* Links principales */
+.navbar .nav-link {
+  color: rgb(80, 60, 40);
+  font-weight: 600;
+   font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: beige;
+  text-decoration: underline;
+}
+
+/* --- MENÚ DESPLEGABLE PERSONALIZADO --- */
+.navbar .dropdown-menu {
+  background-color: rgb(177, 177, 161); /* mismo fondo */
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* sombra suave */
+  border-radius: 0.75rem;
+  margin-top: 5px;
+  padding: 0.5rem 0;
+  min-width: 10rem;
+  
+}
+
+/* ITEMS DEL MENÚ */
+.navbar .dropdown-item {
+  color: rgb(80, 60, 40);
+  font-weight: 500;
+   font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* EFECTO HOVER */
+.navbar .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: beige;
+  text-decoration: underline;
+  padding-left: 1.25rem;
+}
+
+/* FLECHITA HACIA LA DERECHA */
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: "▼";
+  font-size: 0.6rem;
+  margin-left: 6px;
+  color: rgb(80, 60, 40);
+}
+
+/* --- RESPONSIVo --- */
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar .dropdown-menu {
+    text-align: center;
+  }
+}
+/* ===== Ajustes header: logo, buscador y login ===== */
+
+/* Logo responsivo (limita su tamaño en distintos pantallas) */
+.logo-header {
+  max-width: 90px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .logo-header { max-width: 120px; }
+}
+@media (min-width: 1200px) {
+  .logo-header { max-width: 150px; }
+}
+
+/* Título header: se adapta al cel */
+.titulo-header {
+  font-size: 1.05rem;
+  margin: 0;
+  line-height: 1.1;
+}
+@media (min-width: 768px) {
+  .titulo-header { font-size: 1.6rem; }
+}
+@media (min-width: 1200px) {
+  .titulo-header { font-size: 2.2rem; }
+}
+
+/* Buscador */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+}
+
+.search-input {
+  background-color: #d9d3c1;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 40px 10px 15px;
+  color: #5c3b25;
+  font-size: 15px;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #5c3b25;
+  font-size: 18px;
+}
+
+/* Botón iniciar sesión */
+.btn-login {
+  background: linear-gradient(to right, beige, rgb(206, 206, 182));
+  color: #5c3b25;
+  border-radius: 20px;
+  padding: 10px 15px;
+  border: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+}
+
+.btn-botones-carrito:hover {
+  background: radial-gradient(circle, rgb(218, 214, 189), rgb(146, 144, 138));
+  color: rgb(146, 152, 139);
+}
+
+.btn-login:hover {
+    background: radial-gradient(circle, rgb(218, 214, 189), rgb(146, 144, 138));
+  color: rgb(146, 152, 139);
+}
+
+/* Responsive */
+@media (min-width: 769px) {
+  .search-container {
+    width: 200px;
+  }
+  .btn-login {
+    width: auto;
+    max-width: none;
+  }
+}
+
+/* icono botón mobile (solo muestra la lupa como botón pequeño) */
+.btn-icon {
+  background: transparent;
+  border: none;
+  font-size: 1.05rem;
+  color: rgb(80,60,40);
+}
+/* Responsive */
+@media (min-width: 769px) {
+  .search-container {
+    width: 200px;
+  }
+  .btn-login {
+    width: auto;
+    max-width: none;
+  }
+}
+/* =====responsivo para hacer que en el cel se vea en columna el logo titulo, buscador y registro ===== */
+@media (max-width: 767.98px) {
+  /* hacer que las 3 columnas se reacomoden en 2 filas centradas */
+  .bg-header-beige .row { align-items: center; }
+
+  .acciones-header {
+    justify-content: center !important;
+    gap: 0.5rem;
+  }
+
+  /* Hacemos el título más pequeño y centrado */
+  .titulo-header { font-size: 1rem; padding: 0 0.5rem; }
+
+  /* ajustar logo */
+  .logo-header { max-width: 70px; }
+
+  }
+
+/* Pequeño ajuste para que el header no mueva layout en pantallas intermedias */
+.bg-header-beige { padding-top: 1rem; padding-bottom: 1rem; }
